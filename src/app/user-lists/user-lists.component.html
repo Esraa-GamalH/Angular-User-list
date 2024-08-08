@@ -1,0 +1,9 @@
+<app-search (sendNewList)="filterSearch($event)"></app-search>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+    @for (user of users; track user.id){
+    <div class="col">
+        <app-user [userItem]="user"></app-user>
+    </div>
+    }
+</div>
+

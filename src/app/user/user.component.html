@@ -1,0 +1,12 @@
+<div class="card mx-auto my-3">
+    <img [src]="userItem.image" class="card-img-top" alt="..." />
+    @switch (userItem.role){ @case ("admin"){<span class="badge text-bg-danger w-50 m-auto p-2">Admin</span>} @case
+    ("user"){<span class="badge text-bg-success w-50 m-auto p-2">User</span>} @case ("moderator"){<span
+        class="badge text-bg-warning text-white w-50 m-auto p-2">Moderator</span>} }
+    <div class="card-body">
+        <p>{{ userItem.username }}</p>
+        <p>{{ userItem.email }}</p>
+        <p>{{ userItem.phone }}</p>
+        <p>Birth Date: {{ userItem.birthDate | date }}</p>
+    </div>
+</div>
